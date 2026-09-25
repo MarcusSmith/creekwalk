@@ -58,6 +58,10 @@ img {
   object-fit: cover; /* honor the aspect-ratio crop each image was shown at */
 }
 
+img.landscape { aspect-ratio: 4 / 3; }
+
+img.portrait { aspect-ratio: 3 / 4; }
+
 video { width: 100%; height: auto; background: #000; }
 
 video.portrait { width: min(100%, 480px); justify-self: center; }
