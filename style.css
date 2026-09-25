@@ -1,0 +1,72 @@
+/* Dylan's Creek Walk adventures. Fonts, colors, one grid column. */
+
+@font-face {
+  font-family: "Permanent Marker";
+  src: url("assets/fonts/permanent-marker.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  color: #fff;
+  font: 1.2rem/1.5 Optima, Candara, sans-serif;
+  background: #16323b;
+}
+
+/* fixed full-bleed background photo (pseudo-element so iOS behaves) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url("assets/background.avif") center / cover no-repeat;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+  font-family: "Permanent Marker", cursive;
+}
+
+nav a[aria-current="page"] { text-decoration: none; }
+
+main {
+  display: grid;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 16px 4rem;
+}
+
+h1, h2 {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  text-align: center;
+  margin: 1.5rem 0 0;
+}
+
+p, ul { margin: 0; }
+
+a { color: #fff; }
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* honor the aspect-ratio crop each image was shown at */
+}
+
+video { width: 100%; height: auto; background: #000; }
+
+video.portrait { width: min(100%, 480px); justify-self: center; }
+
+/* homepage */
+.home { text-align: center; }
+
+.home .year-link {
+  font-family: "Permanent Marker", cursive;
+  font-size: 1.9rem;
+  margin-top: 1rem;
+}
